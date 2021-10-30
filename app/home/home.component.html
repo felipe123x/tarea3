@@ -1,0 +1,23 @@
+<p *ngFor="let item of fotoGrande"><img id="fotoGrande" src="../../assets/{{item.ruta}}" width="" alt=""></p>
+
+<ul>
+    <li *ngFor="let item of ListaNoticias">
+        <div class="col -sm-5">
+        <h2>{{item.titulo}}</h2>
+        <img   class="rounded float-start" src="../../assets/{{item.imagen}}" alt='{{item.imagen}}'>
+        <p>autor: {{item.autor}} | Fecha: {{item.fecha}} </p>
+        <p class="col -sm-2">{{item.resumen}}</p>
+        <button type="button" class="btn btn-primary" [routerLink]="['/ContenidoNoticia','item.id']" routerLink>leer mas</button>
+        </div>
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of ListaNoticias1">
+        <h2>{{item.titulo}}</h2>
+        <img  class="rounded float-start" src="../../assets/{{item.imagen}}" alt='{{item.imagen}}'>
+        <p>autor: {{item.autor}} | Fecha: {{item.fecha}} </p>
+        <p class="col -sm-12">{{item.resumen}}</p>
+        <button  type="button" class="btn btn-primary"   [routerLink]="['/ContenidoNoticia','item.id']" routerLink>leer mas</button>
+    </li>
+</ul>

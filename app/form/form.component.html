@@ -1,0 +1,37 @@
+<form [formGroup]="formulario" (ngSubmit)="validaciones" class="container">
+    <ul>
+        <li>
+            <label>Nombre Completo</label>
+            <input type="text" class="form-control" formControlName="nombre" placeholder="Digite su nombre">
+            <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty)">
+
+            </div>
+        </li>
+        <li>
+            <label>Teléfono</label>
+            <input type="text" class="form-control" formControlName="telefono" placeholder="Digite su Teléfono">
+        </li>
+        <li>
+            <label>Correro Electrónico</label>
+            <input type="text" class="form-control" formControlName="correo" placeholder="Ingrese su correo">
+        </li>
+        <li>
+            <label>Dirigido a</label>
+            <select class="form-control form-control-sm">
+                <option></option>
+                <option>Contenidos</option>
+                <option>publicidad</option>
+                <option>Sugerencias</option>
+                <option>Suscripciones digitales</option>
+            </select>
+        </li>
+        <li>
+            <label>Mensaje</label>
+            <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+        </li>
+        <li>
+            <button type="submit" [disabled]="!formulario.valid" class="btn btn-primary">Enviar</button>
+        </li>
+    </ul>
+
+</form>
